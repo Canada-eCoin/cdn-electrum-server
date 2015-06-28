@@ -8,7 +8,7 @@ from processor import print_log, logger
 from utils import bc_address_to_hash_160, hash_160_to_pubkey_address, hex_to_int, int_to_hex, Hash
 
 global GENESIS_HASH
-GENESIS_HASH = '12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2'
+GENESIS_HASH = '863626dadaef221e2e2f30ff3dacae44cabdae9e0028058072181b3fb675d94a'
 
 """
 Patricia tree for hashing unspents
@@ -105,7 +105,7 @@ class Storage(object):
     def listunspent(self, addr):
         key = self.address_to_key(addr)
         if key is None:
-            raise BaseException('Invalid Litecoin address', addr)
+            raise BaseException('Invalid Canada eCoin address', addr)
 
         out = []
         for k, v in self.db_utxo.iterator(start=key):

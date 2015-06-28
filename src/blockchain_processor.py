@@ -81,7 +81,7 @@ class BlockchainProcessor(Processor):
         while not self.shared.stopped():
             self.main_iteration()
             if self.shared.paused():
-                print_log("litecoind is responding")
+                print_log("canadaecoind is responding")
                 self.shared.unpause()
             time.sleep(10)
 
@@ -114,13 +114,13 @@ class BlockchainProcessor(Processor):
             try:
                 respdata = urllib.urlopen(self.bitcoind_url, postdata).read()
             except:
-                print_log("cannot reach litecoind...")
+                print_log("cannot reach canadaecoind...")
                 self.wait_on_bitcoind()
             else:
                 r = loads(respdata)
                 if r['error'] is not None:
                     if r['error'].get('code') == -28:
-                        print_log("litecoind still warming up...")
+                        print_log("canadaecoind still warming up...")
                         self.wait_on_bitcoind()
                         continue
                     raise BaseException(r['error'])
@@ -590,7 +590,7 @@ class BlockchainProcessor(Processor):
         try:
             respdata = urllib.urlopen(self.bitcoind_url, postdata).read()
         except:
-            logger.error("litecoind error (getfullblock)",exc_info=True)
+            logger.error("canadaecoind error (getfullblock)",exc_info=True)
             self.shared.stop()
 
         r = loads(respdata)
@@ -598,7 +598,7 @@ class BlockchainProcessor(Processor):
         for ir in r:
             if ir['error'] is not None:
                 self.shared.stop()
-                print_log("Error: make sure you run litecoind with txindex=1; use -reindex if needed.")
+                print_log("Error: make sure you run canadaecoind with txindex=1; use -reindex if needed.")
                 raise BaseException(ir['error'])
             rawtxdata.append(ir['result'])
         block['tx'] = rawtxdata

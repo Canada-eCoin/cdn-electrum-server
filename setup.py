@@ -1,33 +1,33 @@
 from setuptools import setup
 
 setup(
-    name="electrum-ltc-server",
+    name="cdn-electrum-server",
     version="0.9",
-    scripts=['run_electrum_ltc_server','electrum-ltc-server'],
+    scripts=['run_cdn_electrum_server','cdn-electrum-server'],
     install_requires=['plyvel','jsonrpclib', 'irc>=11'],
     package_dir={
-        'electrumltcserver':'src'
+        'cdnelectrumserver':'src'
         },
     py_modules=[
-        'electrumltcserver.__init__',
-        'electrumltcserver.utils',
-        'electrumltcserver.storage',
-        'electrumltcserver.deserialize',
-        'electrumltcserver.networks',
-        'electrumltcserver.blockchain_processor',
-        'electrumltcserver.server_processor',
-        'electrumltcserver.processor',
-        'electrumltcserver.version',
-        'electrumltcserver.ircthread',
-        'electrumltcserver.stratum_tcp',
-        'electrumltcserver.stratum_http'
+        'cdnelectrumserver.__init__',
+        'cdnelectrumserver.utils',
+        'cdnelectrumserver.storage',
+        'cdnelectrumserver.deserialize',
+        'cdnelectrumserver.networks',
+        'cdnelectrumserver.blockchain_processor',
+        'cdnelectrumserver.server_processor',
+        'cdnelectrumserver.processor',
+        'cdnelectrumserver.version',
+        'cdnelectrumserver.ircthread',
+        'cdnelectrumserver.stratum_tcp',
+        'cdnelectrumserver.stratum_http'
     ],
-    description="Litecoin Electrum Server",
-    author="Thomas Voegtlin",
-    author_email="thomasv1@gmx.de",
+    description="Canada eCoin Electrum Server",
+    author="Jason (koad) Zvaniga",
+    author_email="jason@kingodalldata.com",
     license="GNU Affero GPLv3",
-    url="https://github.com/pooler/electrum-ltc-server/",
-    long_description="""Server for the Electrum Lightweight Litecoin Wallet"""
+    url="https://github.com/koad/cdn-electrum-server/",
+    long_description="""Lightweight wallet server for the Canada eCoin"""
 )
 
 

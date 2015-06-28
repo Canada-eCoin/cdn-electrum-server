@@ -231,7 +231,7 @@ def timestr():
 import logging
 import logging.handlers
 
-logger = logging.getLogger('electrum-ltc')
+logger = logging.getLogger('cdn-electrum')
 
 def init_logger(logfile):
     hdlr = logging.handlers.WatchedFileHandler(logfile)

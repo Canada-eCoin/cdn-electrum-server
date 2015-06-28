@@ -1,24 +1,14 @@
-# Main network and testnet3 definitions
+# Main network and testnet1 definitions
 
 params = {
-    'bitcoin_main': {
-        'pubkey_address': 0,
+    'canadaecoin_main': {
+        'pubkey_address': 28,
         'script_address': 5,
-        'genesis_hash': '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f'
+        'genesis_hash': '863626dadaef221e2e2f30ff3dacae44cabdae9e0028058072181b3fb675d94a'
     },
-    'bitcoin_test': {
-        'pubkey_address': 111,
+    'canadaecoin_test': {
+        'pubkey_address': 87,
         'script_address': 196,
-        'genesis_hash': '000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943'
-    },
-    'litecoin_main': {
-        'pubkey_address': 48,
-        'script_address': 5,
-        'genesis_hash': '12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2'
-    },
-    'litecoin_test': {
-        'pubkey_address': 111,
-        'script_address': 196,
-        'genesis_hash': 'f5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f'
+        'genesis_hash': '6d2921ab11709fa4b8da835c9c2efa4b360d82d44c794540c4b1a1642d6b0d1e'
     }
 }
